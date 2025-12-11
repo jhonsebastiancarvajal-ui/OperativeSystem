@@ -1,9 +1,55 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-  <title>Mi Página Funciona</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operative System</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <h1>Hola, la página funciona 🎉</h1>
+
+    <header>
+        <h1>Operative System</h1>
+        <p>Explicación general sobre sistemas operativos y sus principales funciones.</p>
+    </header>
+
+    <section class="contenido">
+        <h2>¿Qué es un Sistema Operativo?</h2>
+        <p>
+            Un sistema operativo es el software principal que administra los recursos del computador 
+            y brinda una interfaz entre el usuario y el hardware.
+        </p>
+
+        <div class="video-box">
+            <h3>Video 1 – Introducción</h3>
+            <iframe src="https://www.youtube.com/embed/VIDEO1" frameborder="0" allowfullscreen></iframe>
+        </div>
+
+        <h2>Funciones del Sistema Operativo</h2>
+        <p>
+            El sistema operativo se encarga de la gestión de procesos, memoria, almacenamiento y dispositivos.
+        </p>
+
+        <div class="video-box">
+            <h3>Video 2 – Funciones</h3>
+            <iframe src="https://www.youtube.com/embed/VIDEO2" frameborder="0" allowfullscreen></iframe>
+        </div>
+
+        <h2>Gestión del Hardware</h2>
+        <p>
+            Permite que el hardware funcione correctamente y que las aplicaciones puedan utilizarlo.
+        </p>
+
+        <div class="video-box">
+            <h3>Video 3 – Hardware</h3>
+            <iframe src="https://www.youtube.com/embed/VIDEO3" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </section>
+
+    <footer>
+        <p>Proyecto académico • Sistemas Operativos</p>
+    </footer>
+
 </body>
 </html>
