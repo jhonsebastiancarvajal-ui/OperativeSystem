@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sistemas Operativos — Tema Alterno</title>
+  <meta name="description" content="Versión alternativa de la página 'Sistemas Operativos' con otro esquema de colores y estructura similar." />
+  <style>
+    :root{
+      --bg:#0f1724;              /* very dark navy */
+      --card:#0b1a2b;            /* deep blue card */
+      --accent:#6ee7b7;          /* seafoam */
+      --accent-2:#8b5cf6;        /* purple accent */
+      --muted:#9aa7b2;           /* muted text */
+      --glass: rgba(255,255,255,0.03);
+      --radius:14px;
+      --maxw:1100px;
+      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, 'Roboto Mono', 'Courier New', monospace;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;background:linear-gradient(180deg,var(--bg),#071226);font-family:Inter,system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial; color:#e6f3ee}
+    .container{max-width:var(--maxw);margin:32px auto;padding:24px}
+
+    header{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:46px;height:46px;border-radius:10px;background:linear-gradient(135deg,var(--accent),var(--accent-2));display:flex;align-items:center;justify-content:center;font-weight:700;color:#082022}
+    nav{display:flex;gap:12px;align-items:center}
+    nav a{color:var(--muted);text-decoration:none;padding:8px 12px;border-radius:10px;font-weight:600}
+    nav a:hover{color:var(--accent)}
+    .cta{background:linear-gradient(90deg,var(--accent),var(--accent-2));padding:8px 14px;border-radius:12px;color:#022; font-weight:700}
+
+    main{margin-top:26px}
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center}
+    .glass{background:var(--glass);padding:28px;border-radius:var(--radius);box-shadow:0 6px 30px rgba(3,6,12,0.6);border:1px solid rgba(255,255,255,0.03)}
+    h1{font-size:28px;margin:0 0 12px}
+    p.lead{color:var(--muted);margin:0 0 18px;line-height:1.5}
+    .features{display:flex;gap:12px;flex-wrap:wrap}
+    .feature{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:12px;border-radius:12px;min-width:170px}
+    .feature h4{margin:0 0 6px}
+    .right-card{padding:18px}
+
+    section{margin-top:28px}
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .card{background:var(--card);padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.02)}
+    .tools-list{display:flex;flex-direction:column;gap:10px}
+    .tool{display:flex;align-items:center;gap:12px;padding:10px;border-radius:10px;background:linear-gradient(180deg, rgba(255,255,255,0.01), transparent)}
+    .tool .tag{font-family:var(--mono);font-size:12px;padding:6px 8px;border-radius:8px;background:rgba(8,16,26,0.6)}
+
+    .evidence-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+    .evidence-item{min-height:110px;display:flex;flex-direction:column;justify-content:center}
+
+    .team-row{display:flex;gap:12px;align-items:center}
+    .avatar{width:64px;height:64px;border-radius:12px;background:linear-gradient(135deg,var(--accent-2),var(--accent));display:flex;align-items:center;justify-content:center;color:#031018;font-weight:800}
+
+    footer{margin-top:36px;color:var(--muted);font-size:13px;display:flex;justify-content:space-between;align-items:center}
+
+    /* responsive */
+    @media (max-width:920px){.hero{grid-template-columns:1fr}.grid-3{grid-template-columns:1fr}.evidence-grid{grid-template-columns:1fr}.container{padding:18px}}
+
+    /* small helpers */
+    .muted{color:var(--muted)}
+    .pill{display:inline-block;padding:6px 10px;border-radius:999px;background:rgba(0,0,0,0.15);font-weight:700}
+    a.small{font-size:13px}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">SO</div>
+        <div>
+          <div style="font-weight:800">Sistemas Operativos</div>
+          <div class="muted" style="font-size:13px">Linux · Docker · Virtualización</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#home">Inicio</a>
+        <a href="#tools">Herramientas</a>
+        <a href="#evidence">Evidencias</a>
+        <a href="#team">Equipo</a>
+        <a href="#contact" class="cta">Ver proyecto</a>
+      </nav>
+    </header>
+
+    <main id="home">
+      <div class="hero">
+        <div class="glass">
+          <h1>Proyecto de laboratorio — Sistemas Operativos</h1>
+          <p class="lead">Guía y recursos para desplegar entornos con Linux, contenedores y máquinas virtuales. Contiene documentación, imágenes de laboratorio y plantillas para evaluación.</p>
+          <div class="features">
+            <div class="feature">
+              <h4>Linux base</h4>
+              <div class="muted">Distribución recomendada: Debian / Ubuntu</div>
+            </div>
+            <div class="feature">
+              <h4>Contenedores</h4>
+              <div class="muted">Docker para desarrollo y pruebas</div>
+            </div>
+            <div class="feature">
+              <h4>Virtualización</h4>
+              <div class="muted">VirtualBox y Vagrant</div>
+            </div>
+          </div>
+        </div>
+
+        <aside class="glass right-card">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px">
+            <strong>Estado</strong>
+            <span class="pill">Activo</span>
+          </div>
+          <div style="font-size:13px;color:var(--muted);margin-bottom:12px">Última actualización: <strong>10 Dic, 2025</strong></div>
+          <div style="display:flex;gap:8px"><a class="pill" href="#tools">Ver herramientas</a><a class="pill" href="#evidence">Ver evidencias</a></div>
+        </aside>
+      </div>
+
+      <section id="tools">
+        <h2>Herramientas</h2>
+        <div class="grid-3" style="margin-top:12px">
+          <div class="card">
+            <h3>Contenedores</h3>
+            <div class="tools-list" style="margin-top:10px">
+              <div class="tool"><div class="tag">docker</div><div><strong>Docker Engine</strong><div class="muted">Versión estable para despliegue de imágenes</div></div></div>
+              <div class="tool"><div class="tag">compose</div><div><strong>Docker Compose</strong><div class="muted">Orquestación simple de varios servicios</div></div></div>
+            </div>
+          </div>
+          <div class="card">
+            <h3>Máquinas Virtuales</h3>
+            <div class="muted" style="margin-top:8px">Configuración recomendada</div>
+            <ul class="muted" style="margin-top:10px">
+              <li>VirtualBox 7+</li>
+              <li>Vagrant (opcional)</li>
+              <li>Imágenes: Ubuntu Server</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Infra</h3>
+            <div class="muted" style="margin-top:8px">Scripting y automatización</div>
+            <div style="margin-top:10px">
+              <div class="muted">Ansible (playbooks simples)</div>
+              <div class="muted">Bash scripts para setup</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="evidence">
+        <h2 style="margin-top:18px">Evidencias</h2>
+        <div class="card" style="margin-top:12px">
+          <div class="evidence-grid">
+            <div class="evidence-item"><strong>Capturas</strong><div class="muted">Screenshots del laboratorio y pasos de instalación</div></div>
+            <div class="evidence-item"><strong>Logs</strong><div class="muted">Archivos de logs y salida de contenedores</div></div>
+            <div class="evidence-item"><strong>Documentos</strong><div class="muted">Guías, diagramas y checklists</div></div>
+            <div class="evidence-item"><strong>Repositorios</strong><div class="muted">Enlaces a código y Dockerfiles</div></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="team">
+        <h2 style="margin-top:18px">Equipo</h2>
+        <div class="card" style="margin-top:12px">
+          <div class="team-row">
+            <div class="avatar">EC</div>
+            <div>
+              <div style="font-weight:800">Esteban C.</div>
+              <div class="muted">Coordinador · DevOps</div>
+            </div>
+          </div>
+          <div style="height:12px"></div>
+          <div class="team-row">
+            <div class="avatar">AM</div>
+            <div>
+              <div style="font-weight:800">Ana M.</div>
+              <div class="muted">Documentación & pruebas</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact">
+        <div class="card" style="margin-top:18px;display:flex;justify-content:space-between;align-items:center">
+          <div>
+            <h3>Accede al repositorio</h3>
+            <div class="muted">Incluye Dockerfiles, Vagrantfile y guías paso a paso.</div>
+          </div>
+          <div style="text-align:right">
+            <a class="cta" href="https://github.com/esteban4-cro/OperativeSystem" target="_blank" rel="noreferrer">Repositorio</a>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer>
+      <div>© 2025 — Proyecto Sistemas Operativos</div>
+      <div class="muted">Diseño alternativo • Tema: Verde púrpura</div>
+    </footer>
+  </div>
+
+  <script>
+    // Smooth scroll for internal links
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', e=>{
+        e.preventDefault();
+        const t = document.querySelector(a.getAttribute('href'));
+        if(t) t.scrollIntoView({behavior:'smooth',block:'start'});
+      })
+    });
+  </script>
+</body>
+</html>
